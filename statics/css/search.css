@@ -1,0 +1,148 @@
+* {
+  font-family: cursive;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    min-width: 300px;
+    min-height: 100%;
+}
+
+#content {
+    min-height: 100%;
+    margin-bottom: 100px;
+}
+
+#search-bar {
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-field {
+    width: 80%;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid;
+    border-color: lightblue;
+    font-size: 15px;
+}
+
+.search-button {
+    position: relative;
+    height: 50px;
+    border: 1px solid;
+    border-color: lightblue;
+    width: 60px;
+}
+
+#filters {
+    border: solid;
+    border-width: 1px;
+}
+
+.section-header {
+    background: #145fb5;
+    padding: 1px;
+    display: table;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.section-title {
+    display: block;
+    float: left;
+    color: white;
+}
+
+#filter-toggle {
+    font-size: 30px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    float: right;
+}
+
+#reset-button {
+    margin: 5px;
+}
+
+.filter {
+    display: block;
+    margin: 5px;
+}
+
+.result {
+    border: solid 1px;
+    margin-top: 5px;
+    padding: 5px;
+    overflow: hidden;
+    display: block;
+    max-width: 1000px;
+}
+
+.court-name {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    background: #145fb5;
+    color: white;
+}
+
+.info-container {
+    float: left;
+    width: 70%;
+}
+
+.pic-container {
+    float: right;
+    width: 20%;
+}
+
+.court-info {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.court-pic {
+    height: 80px;
+    min-width: 100px;
+    display: block;
+    float: left;
+    /*a mock court picture*/
+    background: skyblue;
+    margin-bottom: 5px;
+}
+
+.book-button-container {
+    display: block;
+    float: right;
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {}
+
+@media screen and (min-width: 1280px) {
+    #search-bar {
+        margin: 20px;
+    }
+    #filters {
+        float: left;
+        width: 20%;
+    }
+    #results {
+        float: right;
+        width: 70%;
+    }
+    .result {
+        margin-bottom: 20px;
+    }
+}

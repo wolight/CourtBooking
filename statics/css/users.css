@@ -1,0 +1,107 @@
+
+
+#iconUrl, #isAdmin {
+	display: none;
+}
+
+	.profile span {
+		font-size:40px;
+	}
+
+	.profile #pic img {
+		display:block;
+		margin-top: 2%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:5%;
+	}
+
+	.profile .booking {
+		border:1px solid black;
+	}
+
+
+
+	.profile{
+		background-color:white;
+		padding-top:10%;
+	}
+
+	}
+	.profile #tool {
+    		background-color: white;
+    		color: white;
+    		text-align: left;
+		height:30%;
+    		width: 100%;
+	}
+
+	.profile .tool_bar ul{
+		list-style-type: none;
+    		box-sizing: border-box;
+    		display: block;
+    		width: 100%;
+    		margin:0px;
+    		padding:0px;
+    		text-align:center;
+	}
+
+	.profile .tool_bar li{
+		padding: 10px;
+    		margin:20px;
+    		border:2px solid black;
+    		border-radius: 12px;
+	}
+
+	.profile .tool_bar li a{
+    		color: black;
+    		font-size: 15px;
+    		font-family:sans-serif;
+	}
+
+
+	#booking_history{
+
+		background-color:white;
+		font-family:sans-serif;
+		text-align:center;
+		width:100%;
+		display:none;
+	}
+
+	#notification{
+		background-color:white;
+		font-family:sans-serif;
+		text-align:center;
+		width:100%;
+		display:none;
+	}
+
+
+@media screen and (min-width: 480px){
+	#booking_history{
+		padding-top:5%;
+	}
+	#notification{
+		padding-top:5%;
+	}
+	.profile {
+		padding:0px;
+	}
+	#info {
+		padding-top:10%;
+	}
+
+
+	.profile .tool_bar li{
+		width:20%;
+		float:left;
+		margin:0px;
+		border: none;
+		background-color:rgb(226, 222, 220);
+    		border-radius: 0px;
+	}
+
+	.tool_bar li:hover{
+		background-color: #CF6766;
+	}

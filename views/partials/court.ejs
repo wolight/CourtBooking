@@ -1,0 +1,50 @@
+<section class="main">
+    <div class="info">
+        <article class="court_photo" id="photo">
+            <h2> <%= courtName %> </h2>
+            <img id="court_pic" src="" alt="court photo">
+            <p id="photoURL"> <%= photo %> </p>
+        </article>
+        <article class="court_time">
+            <h2> Available Time </h2>
+            <p id="weekday"> Mon-Fri 10:00AM - 8:00PM </p>
+            <p id="weekend"> Sat-Sun 11:00AM - 10:00PM </p>
+        </article>
+
+    </div>
+
+    <div class="info">
+        <article>
+            <h2> Booking Policy </h2>
+            <p id="policy"> <%= policy %> </p>
+        </article>
+
+        <article>
+            <h2> LOCATION </h2>
+            <p id="location"> <%= location %> </p>
+        </article>
+        <article>
+            <h2> Descriptions </h2>
+            <p id="feature"> <%= description %></p>
+        </article>
+        <article>
+            <h2> Available Sports </h2>
+            <p id="sports"> Basketball, Badminton </p>
+        </article>
+    </div>
+    <form class="buttons">
+        <button id="book_now"><a href="court/booking">Book Now</a></button>
+        <button id="return"><a href="/">Back</a></button>
+    </form>
+    <div class="feedback">
+        <h2> Comments </h2>
+        <section class="comment_feed">
+        </section>
+        <section>
+            <div class='label'> Comment this court: </div>
+            <input type='text' name='comment' class="input_text" />
+            <button type='submit' id="add_comment" onclick="makeComments()"> Comment </button>
+        </section>
+
+    </div>
+</section>

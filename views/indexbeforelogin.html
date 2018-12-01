@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <title>Court Index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <% include partials/headerbeforelogin %>
+    </header>
+
+    <!-- Carousel -->
+    <div id="courtCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Carousel indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#courtCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#courtCarousel" data-slide-to="1"></li>
+        <li data-target="#courtCarousel" data-slide-to="2"></li>
+        <li data-target="#courtCarousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Court Pictures -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <a href=court>
+            <img src="assets/coverPhoto.jpg"
+            width="460" height="345" alt="Court A">
+          </a>
+        </div>
+        <div class="item">
+          <a href=court>
+            <img src="https://kpe.utoronto.ca/sites/default/files/styles/large/public/image/activity/DSC01739-1.jpg?itok=g-UcFl1x"
+            width="460" height="345" alt="Court B">
+          </a>
+        </div>
+        <div class="item">
+          <a href=court>
+            <img src="https://kpe.utoronto.ca/sites/default/files/styles/large/public/image/activity/rp_primary_Softball_Picture.1071.jpg?itok=lNCV5ZsR"
+            width="460" height="345" alt="Court C">
+          </a>
+        </div>
+        <div class="item">
+          <a href=court>
+            <img src="https://kpe.utoronto.ca/sites/default/files/styles/large/public/image/activity/DSC_2104_cropped.jpg?itok=mW1ExQZn"
+            width="460" height="345" alt="Court D">
+          </a>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#courtCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#courtCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Before Login Information -->
+    <div class="container text-center">
+      <h3>Please Login to View More!</h3>
+      <p> You can only access search page if you didn't log in!</p>
+    </div>
+
+    <div>
+        <% include partials/login %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* Login Page */
+* {
+  font-family: cursive;
+}
+#login-popup {
+    position: fixed;
+    z-index: 16;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
+#loginForm *, #regiForm *{
+    margin:0;
+    padding:0;
+    width: 100%;
+    text-align:center;
+    text-decoration: none;
+    list-style: none;
+}
+#loginForm {
+    width: 320px;
+    background: white;
+    margin: 100px auto;
+    padding: 10px;
+    display: block;
+    overflow: auto;
+}
+
+#loginForm * {
+    float: right;
+}
+
+#loginForm input {
+    height: 2em;
+    margin-bottom: 2em;
+}
+
+#login-popup button {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+#login-popup button:hover {
+    background: #808080;
+    text-decoration: underline;
+}
+
+
+
+/* Register Information */
+
+#regiForm {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    height: 320px;
+    padding: 10px;
+    display: none;
+    overflow: auto;
+}
+
+#regiForm * {
+    float: right;
+}
+#regiForm input {
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-height: 460px) {
+  #regiForm {
+    height: auto;
+  }
+}

@@ -1,0 +1,32 @@
+<div id="login-popup">
+    <div id="loginForm">
+        <p class="inputTitle"> Student Number: </p>
+        <input id="loginStudent" type="text" pattern="1\d{9}|9\d{8}" required/>
+        <p class="inputTitile"> Password: </p>
+        <input id="loginPass" type="password" required/>
+        <ul>
+            <li><button id="login"> Login </button> </li>
+            <li><button id="register"> Register </button></li>
+        </ul>
+    </div>
+
+    <div id="regiForm">
+      <p class="inputTitile"> Student Number: </p>
+      <input id="regiStudentNum" type="text" pattern="1\d{9}|9\d{8}" required/>
+      <p class="inputTitile"> Password: </p>
+        <input id="regiPassword" type="password" class="pwd" required/>
+        <p class="inputTitile"> Re-Type Password: </p>
+        <input type="password" class="pwd" required/>
+        <p class="inputTitile"> Firstname: </p>
+        <input id="firstname" required/>
+        <p class="inputTitile"> Lastname: </p>
+        <input id="lastname" required/>
+        <p class="inputTitile"> Email Address: </p>
+        <input id="regiEmail" type="email" placeholder="xxx@xxx.com" required/>
+        <ul>
+        <li><button type="reset" id="backLog"> Back to Login </button> </li>
+        <li><button id="regi"> Register </button></li>
+        <li><button id="regiAdmin"> Register as Admin </button></li>
+        </ul>
+    </div>
+</div>

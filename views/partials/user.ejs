@@ -1,0 +1,57 @@
+
+
+    <div id="info" class="container">
+    	<div class="row">
+    		<div class="col-md-3">
+    
+    			<div id="pic" class="text-center">
+        		<img class="avatar img-circle" id="icon" src='' alt="avatar" style="width:200px;height:200px;" />
+        		<p id="iconUrl"> <%= icon %> </p>
+        		<p id="isAdmin"> <%= admin %> </p>
+        		
+        		<button class="btn btn-default" id='change_pic'>Upload Picture</button>
+    			</div>
+    		</div>
+    		<div class="col-md-9 personal-info">
+    		<span id="fname"> <%= firstname %> </span>
+        	<span id="lname"> <%= lastname %> </span>
+    		
+        	<form class='form-horizontal' role="form" id='profile_form'>
+        		<div class="form-group">
+            			<label class="col-lg-3 control-label">Student Number:</label>
+            			<div class='col-lg-8' id='stunum'><%= studentNum %></div>
+            		</div>
+            		<div class="form-group">
+            			<label class="col-lg-3 control-label">Email: <%= email%></label>
+            			<div class="col-lg-8">
+            				<input type='text' id='email' class="form-control">
+            			</div>
+            		</div>
+            		<div class="form-group">
+            			<label class="col-lg-3 control-label">Phone Number: <%= phoneNum%></label>
+            			<div class="col-lg-8">
+            			<input type='tel' id='phoneNum' pattern="\d{10}" class="form-control">
+            			</div>
+            		</div>
+            		<div class="form-group">
+            			<label class="col-lg-3 control-label">New Password:</label>
+            			<div class="col-lg-8">
+            			<input type='password' id='new_pw' class="form-control">
+            			</div>
+            		</div>
+            		<div class="form-group">
+            			<label class="col-lg-3 control-label">Retype New Password:</label>
+            			<div class="col-lg-8">
+            			<input type='password' id='new_pw_c' class="form-control">
+            			</div>
+            		</div>
+            		<div class="form-group">
+            			<label class="col-md-3 control-label"></label>
+            			<div class="col-md-8">
+            			<button id='submit_profile' class="btn btn-primary">Submit Changes</button>
+            			</div>
+            		</div>
+        	</form>
+    		</div>
+    	</div>
+    </div>

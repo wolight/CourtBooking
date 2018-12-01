@@ -1,0 +1,110 @@
+nav *{
+  font-family: arial;
+}
+* {
+    box-sizing: border-box;
+}
+
+#nav-toggle {
+    font-size: 30px;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+header {
+    display: block;
+    overflow: hidden;
+}
+
+nav {
+    background: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#nav-list {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #808080;
+    text-decoration: underline;
+}
+
+#login-button,
+#logout-button {
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+#login-button:hover,
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+#quick-search {
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    #nav-toggle {
+        display: none;
+    }
+    #nav-list li {
+        float: left;
+        margin: auto;
+        width: 15%;
+    }
+    #login-button,
+    #logout-button {
+        width: 10%;
+        float: right;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #quick-search {
+        display: initial;
+        float: left;
+        margin: 5px;
+        width: 10%;
+    }
+    #header-search {
+        width: 150px;
+        height: 30px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    #header-search:focus {
+        width: 200%;
+    }
+}

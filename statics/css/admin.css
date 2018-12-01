@@ -1,0 +1,208 @@
+* {
+  font-family:cursive;
+}
+
+.tool_bar {
+    	background-color: rgb(173, 165, 167);
+    	color: white;
+    	text-align: left;
+	height:30%;
+    	width: 100%;
+}
+
+.tool_bar ul{
+	list-style-type: none;
+
+    	box-sizing: border-box;
+    	display: block;
+    	width: 100%;
+    	margin:0px;
+    	padding:0px;
+    	text-align:center;
+}
+
+.tool_bar li{
+	padding: 10px;
+    	margin-bottom: 5px;
+}
+
+.tool_bar li a{
+    	color: white;
+    	font-size: 15px;
+    	font-family:sans-serif;
+}
+section .label {
+	clear: both;
+	float: left;
+	min-width: 200px;
+	width: 30%;
+	margin: 1%;
+}
+
+section {
+	margin:3%;
+}
+
+.court_info{
+	display:block;
+}
+
+.court_stat, .user_list, .create_sport, .create_court, .update_news{
+	display:none;
+}
+
+section input{
+	clear: both;
+	width: 80%;
+	margin: 2% 5%;
+}
+
+.court_info form{
+	width:50%;
+	margin:2% 5%;
+	text-align:left;
+}
+
+.court_info form input{
+	width:40%;
+	margin:0px;
+}
+
+.submit_update{
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.create_court form{
+	width:50%;
+	margin:2% 5%;
+	text-align:left;
+}
+
+.create_court form input{
+	width:40%;
+	margin:0px;
+}
+
+.user_list img{
+	height:200px;
+	width:200px;
+}
+
+.court_list img{
+	height:200px;
+	width:200px;
+}
+
+
+.create_sport form{
+	width:50%;
+	margin:2% 5%;
+	text-align:left;
+}
+
+.create_sport form input{
+	width:40%;
+	margin:0px;
+}
+
+.court_stat form{
+	width:50%;
+	margin:2% 5%;
+	text-align:left;
+}
+
+.court_stat form input{
+	width:40%;
+	margin:0px;
+}
+
+
+@media screen and (min-width: 480px){
+	section {
+		display:block;
+		float:left;
+		width:75%;
+		margin:2%;
+	}
+
+
+	.form label{
+		display:block;
+		width:200px;
+		margin: 2% 5%;
+		position:relative;
+	}
+
+	.form input{
+		margin-bottom: 5%;
+	}
+
+	.submit_update{
+		clear: both;
+		float: left;
+	}
+
+	.user {
+		width:150%;
+		background-color:rgb(210, 211, 209);
+		margin-bottom:2%;
+		padding:10px;
+		display:table-cell;
+	}
+
+	.user a{
+		margin: 2%;
+	}
+
+
+
+	section div {
+		clear: both;
+		float: left;
+		min-width: 200px;
+		width: 40%;
+		margin: 2%;
+	}
+
+	section input {
+		float: left;
+		min-width: 200px;
+		width: 60%;
+		margin: 1%;
+	}
+
+
+	.tool_bar {
+    		background-color: rgb(173, 165, 167);
+    		color: white;
+    		float:left;
+    		position:relative;
+    		height:100vh;
+    		width:20%;
+	}
+
+	.tool_bar ul{
+		list-style-type: none;
+
+    		box-sizing: border-box;
+    		display: block;
+    		padding:0px;
+    		text-align:center;
+	}
+
+	.tool_bar li{
+    		padding: 10px;
+    		margin-bottom: 10px;
+	}
+
+	.tool_bar li a{
+    		color: white;
+    		font-size: 15px;
+    		font-family:sans-serif;
+	}
+
+}

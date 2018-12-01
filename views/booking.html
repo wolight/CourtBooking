@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Team10CourtBooking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="/css/booking.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <% include partials/head %>
+</head>
+
+<body onload="init()">
+    <header>
+        <% include partials/header %>
+    </header>
+
+<!--     <section class="courtinfos">
+        <h1 class="courtname">Court A</h1>
+        <img id="courtphoto" src="/temp.jpg">
+    </section> -->
+
+    <section class="time">
+        <h3 id="bs">Booking Specification</h3>
+        <form id="new_booking">
+            <div class="bookingspec">Court Name:</div>
+            <div id="courtlist"></div>
+            <div class="bookingspec">Date:</div>
+            <input type="text" name="date" id="date" required="true">
+            <div class="bookingspec">Start Time:</div>
+            <select style="width: 50%" name='starttime' id="starttime" required="true">
+                        <option value='8' class='option'>8:00am</option>
+                        <option value='9' class='option'>9:00am</option>
+                        <option value='10' class='option'>10:00am</option>
+                        <option value='11' class='option'>11:00am</option>
+                        <option value='12' class='option'>12:00pm</option>
+                        <option value='13' class='option'>1:00pm</option>
+                        <option value='14' class='option'>2:00pm</option>
+                        <option value='15' class='option'>3:00pm</option>
+                        <option value='16' class='option'>4:00pm</option>
+                        <option value='17' class='option'>5:00pm</option>
+                        <option value='18' class='option'>6:00pm</option>
+                        <option value='19' class='option'>7:00pm</option>
+                        <option value='20' class='option'>8:00pm</option>
+                    </select><br>
+            <div class="bookingspec">End Time: </div>
+            <select style="width: 50%" name='endtime' id="endtime" required="true">
+                        <option value='9' class='option'>9:00am</option>
+                        <option value='10' class='option'>10:00am</option>
+                        <option value='11' class='option'>11:00am</option>
+                        <option value='12' class='option'>12:00pm</option>
+                        <option value='13' class='option'>1:00pm</option>
+                        <option value='14' class='option'>2:00pm</option>
+                        <option value='15' class='option'>3:00pm</option>
+                        <option value='16' class='option'>4:00pm</option>
+                        <option value='17' class='option'>5:00pm</option>
+                        <option value='18' class='option'>6:00pm</option>
+                        <option value='19' class='option'>7:00pm</option>
+                        <option value='20' class='option'>8:00pm</option>
+                        <option value='21' class='option'>9:00pm</option>
+                    </select><br>
+            <div class="bookingspec">Comment:</div>
+            <input class="inputtime" id="comment" name="comment" type="text" placeholder="comment">
+            <div id="button_list">
+                <button id="check">Check Availability</button>
+                <button type="submit" id="confirm" class="confirm">Confirm Booking</button>
+            </div>
+        </form>
+        <a href="/"><button id="back">Back</button></a>
+    </section>
+
+    <div>
+        <% include partials/login %>
+    </div>
+
+    <script src="/js/booking.js"></script>
+</body>
+
+</html>

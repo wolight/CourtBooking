@@ -1,0 +1,124 @@
+* {
+  font-family: cursive;
+}
+.main {
+    background-color: white;
+    text-align: left;
+    font-family:sans-serif;
+
+}
+#photoURL {
+  display: none;
+}
+article {
+    	box-sizing: border-box;
+    	display: block;
+    	text-align: center;
+    	width: 100%;
+    	position:relative;
+
+}
+
+.info {
+	margin-top: 50px;
+}
+
+#court_pic {
+	width: 400px;
+	height:300px;
+
+}
+
+.buttons {
+	text-align:center;
+}
+
+.buttons button {
+    background-color: rgb(208, 174, 159);
+    width:60%;
+    height:40px;
+    font-size:20px;
+    margin-bottom:5px;
+    color:white;
+}
+
+.feedback{
+	text-align:center;
+	padding: 5%;
+}
+
+
+.feedback .label {
+	width: 100%;
+	font-weight: bold;
+}
+
+.feedback input{
+	clear: both;
+	width: 90%;
+	height: 40px;
+	margin: 2% 5%;
+}
+
+.comment_feed {
+	padding: 2%;
+	text-align:left;
+}
+
+.comment_feed .comment{
+	background-color:rgb(210, 211, 209);
+	margin: 2% 5%;
+	padding: 2%;
+}
+
+.comment_feed .comment p{
+	font-size:10px;
+}
+
+
+@media screen and (min-width: 480px){
+
+.main {
+	padding-top: 5%;
+}
+
+article {
+    	box-sizing: border-box;
+    	display: block;
+    	text-align: center;
+    	width: 50%;
+    	float: right;
+}
+
+
+#photo {
+	text-align:center;
+}
+
+#court_pic {
+	float:left;
+	margin: 0 0 30px 70px;
+	position:relative;
+}
+
+
+.buttons {
+	margin-top: 500px;
+}
+.buttons button {
+    width:250px;
+}
+
+.feedback{
+	width: 100%;
+	text-align:left;
+	padding: 20px;
+	float:left;
+}
+
+.feedback section {
+	width: 45%;
+	float: left;
+}
+
+}

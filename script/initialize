@@ -1,0 +1,44 @@
+printf '\n'
+read -p '==== Create an admin ===='
+printf '\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 100, "firstname":"Admin",
+"lastname":"Admin", "password":"admin", "email":"admin@mail.utoronto.ca", "admin":true}' \
+http://localhost:3000/user \
+--cookie-jar user1.cookie
+
+printf '\n'
+read -p '==== Admin100 Login ===='
+printf '\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 100, "password":"admin"}' \
+http://localhost:3000/login \
+--cookie-jar user1.cookie
+
+printf '\n'
+read -p '==== Add Court into the database ===='
+printf '\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Tennis", "description":"A tennis court", "location":"Second Floor",
+"photo":"assets/coverPhoto.jpg"}' \
+http://localhost:3000/court \
+--cookie user1.cookie
+printf '\n'
+read -p '==== Add Court into the database ===='
+printf '\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Basketball", "description":"A tennis court", "location":"Second Floor",
+"photo":"assets/coverPhoto.jpg"}' \
+http://localhost:3000/court \
+--cookie user1.cookie
+printf '\n'
+read -p '==== Add Court into the database ===='
+printf '\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Football", "description":"A tennis court", "location":"Second Floor",
+"photo":"assets/coverPhoto.jpg"}' \
+http://localhost:3000/court \
+--cookie user1.cookie
+printf '\n'
+
+printf '\n==== Complete ====\n\n'

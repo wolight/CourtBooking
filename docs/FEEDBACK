@@ -1,0 +1,30 @@
+On search page, large screen threshold too wide.Filter by capacity on 
+search page, booking policy and "list of menu items with icons for 
+courts" on book court page, news on dashboard, logged in version of 
+dashboard, no equipment requirements on admin page.There is some @media 
+css, but it is not used effectively.
+
+======================
+
+For HTML and CSS Validation comments, if any, see here:
+=== admin.html === Error: Attribute “pattern” is only allowed when the 
+input type is “email”, “password”, “search”, “tel”, “text”, or “url”. 
+ From line 76, column 5; to line 76, column 88 There were errors. === 
+booking.html === Error: An “img” element mus
+=== booking.css === { "cssvalidation" : { "uri" : "booking.css", 
+"checkedby" : "http://www.w3.org/2005/07/css-validator", "csslevel" : 
+"css3", "date" : "2017-02-26T06:32:14Z", "timestamp" : "1488133934920", 
+"validity" : false, "result" : { "errorcount" :
+
+======================
+
+Further comments on your Phase 2 to improve towards following phases are 
+as follows:
+Search page needs top bar. Suggest making the typeface consistent.
+Most of your requirements are present here, but the overall style of the 
+pages is very basic. Try to make your project look like a professional 
+website and make sure your responsive css works. Smartphones can't use 
+this site well right now. The titles on your pages should match what the 
+pages is (about half have the title "CSC309 A1"). Finally, there's a lot 
+of code to handle date and time pickers. It might be easier to use 
+HTML5's inputs for those or the jQuery UI options.

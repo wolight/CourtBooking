@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Court Search</title>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <!--timepickler plugin css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <% include partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include partials/header %>
+    </header>
+
+    <div id="content">
+        <section id="search-bar">
+            <form>
+                <!-- class here so it can be reused-->
+                <span><input type="text" class="search-field" placeholder="Search By courtname"><input class="search-button" type="button" value="Search"></span>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="filters">
+            <div class="section-header">
+                <h2 class="section-title">Filters</h2>
+                <a id="filter-toggle" href="#">&#9776;</a>
+            </div>
+
+            <div id="filter-content">
+                <div id="location" class="filter">
+                    <h3>Choose the court location</h3>
+                    <form class="filter-form">
+                        <select name="location" id="location-option">
+                            <!-- Get from server
+                            <option value="ac">Athletic Centre</option>
+                            <option value="hh">Hart House</option>
+                            <option value="pl1">placeholder1</option>
+                            <option value="pl2">placeholder2</option> -->
+                        </select>
+                    </form>
+                </div>
+
+
+                <div id="type" class="filter">
+                    <h3>Choose the type of sport</h3>
+                    <form id="sport-option" class="filter-form" action="">
+                        <!-- Get from server
+                        <input type="radio" name="sport" value="football">Football<br>
+                        <input type="radio" name="sport" value="baseball">Baseball<br>
+                        <input type="radio" name="sport" value="soccer">Soccer<br>
+                        <input type="radio" name="sport" value="tennis">Tennis-->
+                    </form>
+                </div>
+
+                <div id="availability" class="filter">
+                    <h3>Choose the days of week</h3>
+                    <form class="filter-form" action="">
+                        <input type="checkbox" name="day" value="mon">Monday<br>
+                        <input type="checkbox" name="day" value="tue">Tuesday<br>
+                        <input type="checkbox" name="day" value="wed">Wednesday<br>
+                        <input type="checkbox" name="day" value="thu">Thursday<br>
+                        <input type="checkbox" name="day" value="fri">Friday<br>
+                        <input type="checkbox" name="day" value="sat">Satuarday<br>
+                        <input type="checkbox" name="day" value="sun">Sunday
+                    </form>
+                </div>
+
+                <!--time picker-->
+                <div id="time" class="filter">
+                    <h3>Choose the time</h3>
+                    <form class="filter-form" action="">
+                        <div>From</div>
+                        <input type="timepicker" class="timepicker" name="from-time" />
+                        <div>To</div>
+                        <input type="timepicker" class="timepicker" name="to-time" />
+                    </form>
+                </div>
+
+                <div>
+                    <button id="reset-button">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            <div id="results-list">
+
+            </div>
+
+
+        </section>
+    </div>
+
+    <div>
+        <% include partials/login %>
+    </div>
+
+    <!--timepickler plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+</body>
+
+</html>

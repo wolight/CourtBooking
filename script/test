@@ -1,0 +1,159 @@
+read -p '==== POST a user into the database ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 1002000300, "firstname":"Jason",
+"lastname":"Li", "password":"123", "email":"jason@mail.utoronto.ca"}' \
+http://localhost:3000/user \
+--cookie-jar user1.cookie
+
+read -p '\n==== POST this user again, expected BAD REQ ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 1002000300, "firstname":"Jason",
+"lastname":"Li", "password":"123", "email":"jason@mail.utoronto.ca"}' \
+http://localhost:3000/user \
+--cookie user1.cookie
+
+read -p '\n==== User1002000300 Login ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 1002000300, "password":"123"}' \
+http://localhost:3000/login \
+--cookie-jar user1.cookie
+
+read -p '\n==== Trying to GET User Info ====\n'
+curl -v -H "Content-Type: application/json" \
+-X GET http://localhost:3000/user/1002000300 \
+--cookie user1.cookie
+
+
+read -p '\n==== Trying to PUT user information: Update Profile ====\n'
+curl -v -H "Content-Type: application/json" \
+-X PUT -d '{"firstname":"Linda", "email":"linda mail.utoronto.ca",
+"phoneNum":"4160001234", "password":"123456"}' \
+http://localhost:3000/user/1002000300 \
+--cookie user1.cookie
+
+read -p '\n==== Logout ====\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/index/logout \
+--cookie-jar user1.cookie
+
+read -p '\n==== Trying to PUT info, Expected BAD REQ ====\n'
+curl -v -H "Content-Type: application/json" \
+-X PUT -d '{"firstname":"Linda", "email":"linda mail.utoronto.ca",
+"phoneNum":"4160001234", "password":"123456"}' \
+http://localhost:3000/user/1002000300 \
+--cookie user1.cookie
+
+read -p '\n==== Login Using old Password, Expected BAD REQ ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 1002000300, "password":"123"}' \
+http://localhost:3000/login \
+--cookie user1.cookie
+
+read -p '\n==== Login Using new Password ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"studentNum": 1002000300, "password":"123456"}' \
+http://localhost:3000/login \
+--cookie-jar user1.cookie
+
+read -p '\n==== Add a court into the database ====\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Tennis", "description":"A tennis court", "location":"Second Floor"}' \
+http://localhost:3000/court \
+--cookie user1.cookie
+
+read -p '\n=== GET that court ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/court/10000 \
+--cookie user1.cookie
+
+read -p '\n=== PUT that court, Update info ===\n'
+curl -v -H "Content-Type: application/json" \
+-X PUT -d '{"location":"First Floor"}' \
+http://localhost:3000/court/10000/edit \
+--cookie user1.cookie
+
+read -p '\n=== GET a different court, Expect BAD REQ ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/court/10001 \
+--cookie user1.cookie
+
+read -p '\n=== Try to post a comment to that court ===\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"comment":"My comment"}' \
+http://localhost:3000/court/10000/comment \
+--cookie user1.cookie
+
+read -p '\n=== GET that court to view comment and Update ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/court/10000 \
+--cookie user1.cookie
+
+read -p '\n=== POST a booking, using different court EXPECT BAD REQ ===\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Basketball", "date":"2017-03-17", "starttime":"7", endtime:"8"}'\
+http://localhost:3000/booking \
+--cookie user1.cookie
+
+read -p '\n=== POST a booking, using missing params EXPECT BAD REQ ===\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"date":"2017-03-17", "starttime":"7", endtime:"8"}'\
+http://localhost:3000/booking \
+--cookie user1.cookie
+
+read -p '\n=== POST a booking===\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"courtName":"Tennis", "date":"2017-03-17", "starttime":"7", endtime:"8"}'\
+http://localhost:3000/booking \
+--cookie user1.cookie
+
+read -p '\n=== GET all Booking history ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/booking \
+--cookie user1.cookie
+
+read -p '\n=== DELETE a different Booking information, Expect BAD REQ ===\n'
+curl -v -H "Content-Type: application/json" \
+-X DELETE \
+http://localhost:3000/booking/BasketBall/2017-03-17/7 \
+--cookie user1.cookie
+
+read -p '\n=== DELETE that Booking information, Expect BAD REQ ===\n'
+curl -v -H "Content-Type: application/json" \
+-X DELETE \
+http://localhost:3000/booking/Tennis/2017-03-17/7 \
+--cookie user1.cookie
+
+read -p '\n=== GET all Booking history ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET \
+http://localhost:3000/booking \
+--cookie user1.cookie
+
+read -p '\n=== POST news ===\n'
+curl -v -H "Content-Type: application/json" \
+-X POST -d '{"new_title":"Alert", "des":"Test news", "date":"2017-3-17"}'\
+http://localhost:3000/admin/news \
+--cookie user1.cookie
+
+read -p '\n=== GET all News ===\n'
+curl -v -H "Content-Type: application/json" \
+-X GET http://localhost:3000/user/1002000300/news \
+--cookie user1.cookie
+
+read -p '\n=== Delete Tennis Court ===\n'
+curl -v -H "Content-Type: application/json" \
+-X DELETE http://localhost:3000/court/10000 \
+--cookie user1.cookie
+
+
+read -p '\n=== Delete My account ===\n'
+curl -v -H "Content-Type: application/json" \
+-X DELETE http://localhost:3000/user/1002000300 \
+--cookie user1.cookie
+
+printf '\n\n==== Complete Test. Please Please mark us kindly :) :) ====\n\n\n\n'

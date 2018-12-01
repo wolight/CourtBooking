@@ -1,0 +1,345 @@
+.calendar-box {
+    display:none;
+    background-color:cornsilk;
+    border:1px solid #444;
+    position:absolute;
+    width:250px;
+    padding: 0 5px;
+    z-index: 1;
+}
+#check {
+  display: none;
+}
+
+.calendar-box select.calendar-month {
+    width:90px;
+}
+
+.calendar-box select.calendar-year {
+    width:70px;
+}
+
+.calendar-box .calendar-cancel {
+    width:80%;
+    position: relative;
+    top: 0px;
+}
+
+.calendar-box table td {
+    width:14%;
+}
+
+.calendar-box .calendar-title {
+    text-align:center;
+}
+
+.calendar-box a {
+    text-decoration:none;
+}
+
+.calendar-box .today a {
+    padding:0 5px;
+    margin-left:-5px;
+    background-color:#ffe9c6;
+}
+
+.calendar-box .selected a {
+    padding:0 5px;
+    margin-left:-5px;
+    background-color:#c9ff8b;
+}
+
+.bookingspec {
+    margin-bottom: 4%;
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    margin-left: 15%;
+    margin-top: 4%;
+    max-width: 100%;
+    width: 50%;
+}
+
+.time input{
+    font-size: 15px;
+    padding: 2px;
+}
+
+#comment{
+    padding: 20px;
+    max-width: 100%;
+}
+
+#courtphoto{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+* {
+    margin:0;
+    padding:0;
+    width: 100%;
+    max-width: 100%;
+    text-align:center;
+    text-decoration: none;
+    list-style: none;
+}
+
+button{
+    background-color: burlywood;
+    border: 0px;
+    width: 40%;
+    height: 43px;
+    margin: 5px;
+}
+
+body{
+    background-color: cornsilk;
+}
+
+.monthPre{
+ color: gray;
+ text-align: center;
+}
+
+.monthNow{
+ color: black;
+ text-align: center;
+}
+
+.dayNow{
+ border: 2px solid black;
+ color: #FF0000;
+ text-align: center;
+}
+
+.calendar td{
+ htmlContent: 2px;
+ width: 40px;
+}
+
+.monthNow th{
+ background-color: #000000;
+ color: #FFFFFF;
+ text-align: center;
+}
+
+.dayNames{
+ background: #000000;
+ color: #FFFFFF;
+ text-align: center;
+}
+
+.time{
+    font-family: cursive;
+}
+
+.time input {
+    position: relative;
+    top: 0px;
+    left: auto;
+    right: auto;
+    width: 50%;
+    font-family: cursive;
+}
+
+#button_list{
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+button{
+    font-family: cursive;
+}
+
+
+@media screen and (min-width: 480px) {
+    #navMenu {
+        display: none;
+    }
+
+    nav li {
+        width: 20%;
+    }
+
+
+    .time{
+        width: 100%;
+        height: 200px;
+    }
+
+    .time input{
+        font-size: 20px;
+        padding: 1px;
+    }
+
+    #back{
+        font-size: 20px;
+    }
+
+    .calendar-box {
+        display:none;
+        border:1px solid #444;
+        position:absolute;
+        width:250px;
+        padding: 0 5px;
+        z-index: 1;
+    }
+
+    #button_list button{
+        font-size: 20px;
+        padding: 5px;
+    }
+}
+
+
+@media screen and (min-width: 680px) {
+    #navMenu {
+        display: none;
+    }
+    nav li {
+        width: 20%;
+    }
+
+    .time input{
+         font-size: 30px;
+        padding: 10px;
+    }
+
+    .calendar-box{
+        width: 45%;
+        padding: 10px;
+    }
+
+    .calendar-box .calendar-cancel {
+        margin:0;
+        position: relative;
+        top: -3px;
+    }
+
+    #bs{
+        font-size: 30px;
+    }
+
+    #button_list{
+        margin-top:5%;
+        margin-bottom: 5%;
+    }
+
+    #back{
+        font-size: 20px;
+    }
+
+    .bookingspec {
+        margin-bottom: 3%;
+        font-size: 30px;
+        text-align: left;
+        color: black;
+        margin-left: 15%;
+        margin-top: 3%;
+    }
+
+    button{
+        float: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 20px;
+        text-align: center;
+        margin-top:2%;
+        margin-bottom: 2%;
+        height: 35px;
+    }
+
+    body{
+    background-color: cornsilk;
+    }
+
+
+}
+
+@media screen and (min-width: 1050px) {
+
+    body {
+        background-color: cornsilk;
+        margin: 0px;
+        width: 100%;
+    }
+
+    button{
+            float: left;
+            margin-left: 70px;
+            font-size: 30px;
+            text-align: center;
+            height: 50px;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .calendar-box{
+        padding: 50px;
+        width: 40%;
+        font-size: 30px;
+    }
+
+    .calendar-title select{
+        font-size: 25px;
+    }
+
+
+    .courtname{
+        font-size: 50px;
+    }
+
+    #bs{
+        font-size: 50px;
+    }
+
+    .bookingspec {
+        margin-bottom: 1%;
+        font-size: 40px;
+        text-align: left;
+        color: black;
+        margin-left: 15%;
+        margin-top: 2%;
+        max-width: 100%;
+    }
+
+    .time input{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    #comment{
+        padding:50px;
+    }
+
+    #button_list button{
+        margin-left: 30%;
+        font-size: 30px;
+    }
+
+    #back{
+        margin-left: 30%;
+        font-size: 30px;
+    }
+
+    .calendar-box select.calendar-month {
+        width:130px;
+    }
+
+    .calendar-box select.calendar-year {
+        width:100px;
+    }
+    .calendar-box .calendar-cancel {
+        width:80%;
+        position: relative;
+        top: 10px;
+        font-size: 35px;
+    }
+
+}

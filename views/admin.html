@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC309 A1</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/common.css">
+    <% include partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include partials/header %>
+    </header>
+
+    <div class="tool_bar">
+        <ul>
+            <li id="up_info"><a href="#top">Update Court Info</a></li>
+            <li id="u_link"><a href="#top">User Lists</a></li>
+            <li id="c_link"><a href="#top"> Court List </a></li>
+            <li id="up_news"><a href="#top"> Update News </a></li>
+            <li id="new_court"><a href="#top">Create Court</a></li>
+            <li id="new_sport"><a href="#top">Add Sports</a></li>
+        </ul>
+    </div>
+    <section>
+
+			<section class='court_info'>
+				<h2> Update Court Information </h2>
+				<div class='label'>Enter Court ID:</div>
+				<input type='number' id='courtId' required>
+				<button type='submit_update' id='get_gourt_info'> Get Court Info </button>
+				<div id='input_info'>
+				<div class='label'>Court Name: </div>
+				<div id='UcourtName'></div>
+				<div class='label'>Policy:</div>
+				<input type='text' id='Upolicy' />
+				<div class='label'>Location:</div>
+				<input type='text' id='Ulocation' />
+				<div class='label'>Description:</div>
+				<input type='text' id='Udescription' />
+				<div class='label'>Available Sports:</div>
+				<div class='sports_form' id='Usports'>
+				</div>
+				<div class='label'>Photo url:</div>
+				<input type='text' id='photo' />
+
+				<button class='submit_update' id='updatecourt'>Submit Changes</button>
+				<button class='submit_update' id='deletecourt'>Delete Court</button>
+				</div>
+			</section>
+
+
+			<section class='user_list'>
+				<div class="row">
+				<h2 class="page-header"> User Lists </h2>
+				<section class="row" id='userlist'>
+
+				</section>
+				<section id='suspend'>
+					<h2> Suspend User </h2>
+					<div class='label'> Student Number: </div>
+					<input type='number' id='stunum' name='stunum'>
+					<button type='submit' class='submit_update' id='delete_user'> Suspend </button>
+				</section>
+				</div>
+			</section>
+
+			<section class='create_court'>
+				<h2> Create New Court </h2>
+				<div class='label'>Court Name:</div>
+				<input type='text' id='name' name='name' required>
+				<!--div class='label'>Available Time:</div>
+				<input type='text' -->
+				<div class='label'>Description:</div>
+				<input type='text' id='description' name='description'>
+				<div class='label'>Location:</div>
+				<input type='text' id='location' name='location'>
+				<div class='label'>Policy:</div>
+				<input type='text' id='policy' name='policy'>
+				<div class='label'>Photo url:</div>
+				<input type='text' id='photo' name='photo'>
+				<button type='submit' class='submit_update' id='create_court'> Submit </button>
+			</section>
+			<section class='create_sport'>
+				<h2> Add sports to Court</h2>
+				<div class='label'>Court Id: </div>
+				<input type='number' id='courtId' required>
+				<div class='label'>Sport:</div>
+				<input type='text' id='sport' required>
+				<button type='submit' class='submit_update' id='add_new_sport'> Add </button>
+			</section>
+
+			<section class='court_list'>
+				<h2> Court List </h2>
+				<div id='courtlist'>
+				</div>
+			</section>
+
+
+			<section class='update_news'>
+				<h2> Post Notifications </h2>
+				<div class='label'>Title:</div>
+				<input type='text' id='title' name='title'>
+				<div class='label'>Content:</div>
+				<input type='text' id='des' name='des'>
+				<button type='submit' class='submit_update' id='create_news'> Publish </button>
+			</section>
+		</section>
+
+
+		<script src="/js/admin.js" type="text/javascript"></script>
+	</body>
+</html>

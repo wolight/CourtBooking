@@ -1,0 +1,30 @@
+{
+    "name": "courtbooking",
+    "version": "0.0.1",
+    "description": "A website used to reserve sport courts",
+    "main": "app.js",
+    "scripts": {
+        "start" : "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Team 10",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.16.0",
+        "express": "4.15.2",
+        "express-bearer-token": "^2.1.0",
+        "express-session": "1.15.1",
+        "jwt-simple": "^0.5.1",
+        "mongodb": "^2.2.22",
+        "mongoose-auto-increment": "5.0.1",
+        "sha1": "^1.1.1",
+        "ejs": "2.5.6",
+        "mongoose": "4.9.0",
+        "crypto": "0.0.3",
+        "jsonwebtoken": "7.3.0"
+
+    },
+    "engines": {
+        "node": "6.9.5"
+    }
+}
