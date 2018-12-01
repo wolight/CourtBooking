@@ -1,5 +1,6 @@
 # CourtBooking
-Team 10: JiaXin Wu, Niko Mao, Wendy-Wenxi Hu and Meng Wei
+#### CSC309 Course Project
+#### Team 10: JiaXin Wu, Niko Mao, Wendy-Wenxi Hu and Meng Wei
 
 ## DESCRIPTION:
 CourtBooking is a website used to manage or book sport courts in the Athletic Centre. Working staffs could use this website to update the current or future information and status of specific sport courts. U of T students or any registered members could use this website to book a court in advance individually or as a group.
